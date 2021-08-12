@@ -38,4 +38,18 @@ public class MommifierTest {
         Assertions.assertTrue(vowels.isMoreThan30(testLetter));
     }
 
+    @Test
+    void should_return_false_if_vowels_letter_is_less_than_30_percent(){
+        Vowels vowels = new Vowels();
+        String testLetter = "arrrrrrr";
+        Assertions.assertFalse(vowels.isMoreThan30(testLetter));
+    }
+
+    @Test
+    void should_replace_vowels_if_vowels_rate_is_more_than_30_percent(){
+        Vowels vowels = new Vowels();
+        String testLetter = "aaaaaaaaaaarr";
+        Assertions.assertEquals("mommyrr", vowels.replaceAll(testLetter));
+    }
+
 }

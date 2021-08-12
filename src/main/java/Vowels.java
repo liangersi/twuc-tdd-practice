@@ -16,4 +16,11 @@ public class Vowels {
         List<String> characters = Arrays.asList(chars);
         return characters.stream().filter(this::isVowels).count();
     }
+
+    public String replaceAll(String testLetter) {
+        if(!this.isMoreThan30(testLetter)) {
+            return testLetter;
+        }
+        return testLetter.replaceAll("[aeiou]+", "mommy");
+    }
 }
