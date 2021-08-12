@@ -23,4 +23,11 @@ public class MommifierTest {
         String testLetter = "aeihj";
         Assertions.assertTrue(vowels.isMoreThan30(testLetter));
     }
+
+    @Test
+    void should_return_right_length_when_given_a_string(){
+        Vowels vowels = new Vowels();
+        String testLetter = "aeihjkljutrrvbnxzawi";
+        Assertions.assertEquals(6, vowels.countLength(testLetter));
+    }
 }
