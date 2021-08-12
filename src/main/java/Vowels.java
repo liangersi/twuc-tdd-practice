@@ -8,7 +8,7 @@ public class Vowels {
     }
 
     public boolean isMoreThan30(String testLetter) {
-        return true;
+        return countLength(testLetter) > testLetter.length() * 0.3;
     }
 
     public long countLength(String testLetter) {

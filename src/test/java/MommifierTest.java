@@ -30,4 +30,12 @@ public class MommifierTest {
         String testLetter = "aeihjkljutrrvbnxzawi";
         Assertions.assertEquals(6, vowels.countLength(testLetter));
     }
+
+    @Test
+    void should_return_true_if_vowels_letter_is_more_than_30_percent(){
+        Vowels vowels = new Vowels();
+        String testLetter = "aaaaaaaaaaarr";
+        Assertions.assertTrue(vowels.isMoreThan30(testLetter));
+    }
+
 }
